@@ -28,6 +28,14 @@ CREATE TABLE IF NOT EXISTS boisson (
     ON DELETE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS client (
+    id INT UNSIGNED AUTO_INCREMENT,
+    nom VARCHAR(50) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    code_postal INT UNSIGNED NOT NULL,
+    PRIMARY KEY(id)
+);
+
 -- Relationship table
 CREATE TABLE IF NOT EXISTS ingredient_focaccia (
     id_ingredient INT UNSIGNED,
