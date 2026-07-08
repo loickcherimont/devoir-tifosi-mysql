@@ -18,6 +18,16 @@ CREATE TABLE IF NOT EXISTS marque (
     PRIMARY KEY(id)
 );
 
+CREATE TABLE IF NOT EXISTS boisson (
+    id INT UNSIGNED AUTO_INCREMENT,
+    nom VARCHAR(50) NOT NULL,
+    id_marque INT UNSIGNED NOT NULL,
+    PRIMARY KEY(id),
+    CONSTRAINT fk_marque
+    FOREIGN KEY (id_marque) REFERENCES marque (id)
+    ON DELETE CASCADE
+);
+
 -- Relationship table
 CREATE TABLE IF NOT EXISTS ingredient_focaccia (
     id_ingredient INT UNSIGNED,
