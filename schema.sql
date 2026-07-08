@@ -36,6 +36,17 @@ CREATE TABLE IF NOT EXISTS client (
     PRIMARY KEY(id)
 );
 
+CREATE TABLE IF NOT EXISTS menu (
+    id INT UNSIGNED AUTO_INCREMENT,
+    nom VARCHAR(50) NOT NULL,
+    prix DECIMAL(5, 2) NOT NULL,
+    id_focaccia INT UNSIGNED NOT NULL,
+    PRIMARY KEY(id),
+    CONSTRAINT fk_focaccia_m
+    FOREIGN KEY (id_focaccia) REFERENCES focaccia (id)
+    ON DELETE CASCADE
+);
+
 -- Relationship table
 CREATE TABLE IF NOT EXISTS ingredient_focaccia (
     id_ingredient INT UNSIGNED,
