@@ -12,6 +12,13 @@ CREATE TABLE IF NOT EXISTS focaccia (
     PRIMARY KEY(id)
 );
 
+CREATE TABLE IF NOT EXISTS marque (
+    id INT UNSIGNED AUTO_INCREMENT,
+    nom VARCHAR(50) NOT NULL,
+    PRIMARY KEY(id)
+);
+
+-- Relationship table
 CREATE TABLE IF NOT EXISTS ingredient_focaccia (
     id_ingredient INT UNSIGNED,
     id_focaccia INT UNSIGNED,
