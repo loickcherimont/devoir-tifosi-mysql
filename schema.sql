@@ -48,16 +48,16 @@ CREATE TABLE IF NOT EXISTS menu (
 );
 
 -- Relationship table
-CREATE TABLE IF NOT EXISTS ingredient_focaccia (
-    id_ingredient INT UNSIGNED,
+CREATE TABLE IF NOT EXISTS focaccia_ingredient (
     id_focaccia INT UNSIGNED,
+    id_ingredient INT UNSIGNED,
     quantite INT UNSIGNED NOT NULL,
-    PRIMARY KEY (id_ingredient, id_focaccia),
-        CONSTRAINT fk_ingredient
-        FOREIGN KEY (id_ingredient) REFERENCES ingredient (id)
+    PRIMARY KEY (id_focaccia, id_ingredient),
+        CONSTRAINT fk_focaccia
+        FOREIGN KEY (id_focaccia) REFERENCES ingredient (id)
         ON DELETE CASCADE,
-    CONSTRAINT fk_focaccia
-        FOREIGN KEY (id_focaccia) REFERENCES focaccia (id)
+    CONSTRAINT fk_ingredient
+        FOREIGN KEY (id_ingredient) REFERENCES focaccia (id)
         ON DELETE CASCADE
 );
 
