@@ -33,18 +33,24 @@ mysql -u tifosi -p
 
 4. The command line prompts you for a password, use `tifosi`
 
-5. To create schemas, run `schema.sql`
+5. Use the `tifosi` database
+
+```bash
+USE tifosi;
+```
+
+6. To create schemas, run `schema.sql`
 
 ```bash
 source [WORKING DIRECTORY PATH]/devoir-tifosi-mysql/schema.sql
 ```
 
-6. You can consult all tables in tifosi database using `SHOW TABLES;` command
+7. You can consult all tables in tifosi database using `SHOW TABLES;` command
 
 
 ## ▶️ Usage
 
-To insert test run `data.sql`
+To insert test data run `data.sql`
 
 ```bash
 source [WORKING DIRECTORY PATH]/devoir-tifosi-mysql/data.sql
