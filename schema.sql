@@ -54,10 +54,10 @@ CREATE TABLE IF NOT EXISTS focaccia_ingredient (
     quantite INT UNSIGNED NOT NULL,
     PRIMARY KEY (id_focaccia, id_ingredient),
         CONSTRAINT fk_focaccia
-        FOREIGN KEY (id_focaccia) REFERENCES ingredient (id)
+        FOREIGN KEY (id_focaccia) REFERENCES focaccia (id)
         ON DELETE CASCADE,
     CONSTRAINT fk_ingredient
-        FOREIGN KEY (id_ingredient) REFERENCES focaccia (id)
+        FOREIGN KEY (id_ingredient) REFERENCES ingredient (id)
         ON DELETE CASCADE
 );
 
