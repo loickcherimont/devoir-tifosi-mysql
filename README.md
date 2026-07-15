@@ -56,6 +56,14 @@ To insert test data run `data.sql`
 source [WORKING DIRECTORY PATH]/devoir-tifosi-mysql/data.sql
 ```
 
+To run all test requests use `test_requests.sql`  
+
+```bash
+source [WORKING DIRECTORY PATH]/devoir-tifosi-mysql/test_requests.sql
+```  
+  
+Or you can consult each SQL requests one by one, using a monitor and the request you want to verify.
+
 ## 🔑 License
 
 <div align="center">Copyright &copy; 2026 | Loick CHERIMONT | All Rights Reserved.</div>
